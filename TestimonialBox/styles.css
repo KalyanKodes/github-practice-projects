@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F4F4;
+}
+
+.testimonialBox{
+    width: 700px;
+    /* height: 300px; */
+    background-color: #476CE4;
+    margin: 0 10px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.upperBox{
+    width: 80%;
+    /* height: 60%; */
+    /* background-color: rgb(88, 88, 77); */
+    position: relative;
+    padding: 10px;
+}
+
+.fa-solid{
+    position: absolute;
+    top: 20px;
+    font-size: 40px;
+    color: #7F98EC;
+
+}
+
+.fa-quote-left{
+    left: 100%;
+}
+.fa-quote-right{
+    right: 100%;
+}
+
+.progressBar{
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    animation: progress infinite 10s linear;
+    margin-bottom: 10px;
+}
+
+.upperBox p{
+    margin-top: 20px;
+    color: white;
+    line-height: 30px;
+}
+
+
+.profileBox{
+    width: 200px;
+    /* height: 200px; */
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileBox p{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileBox p :nth-child(1){
+    font-weight: 900;
+}
+
+.profileBox p span{
+    margin: 5px 0 ;
+}
+
+.profilePic{
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 20px 0 0 ;
+}
+@keyframes progress{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
