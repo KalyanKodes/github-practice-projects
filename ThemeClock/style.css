@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* transition: .5s; */
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.darkModeButton{
+    width: 70px;
+    /* padding: 10px; */
+    height: 30px;
+    margin: 80px auto;
+    color: #fff;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.darkModeButton.modeOn{
+    color: black;
+    background-color: #fff;
+}
+
+.modeOn{
+    background-color: black;
+}
+.timerContainer{
+    width: 300px;
+    height: 400px;
+    /* background-color: blue; */
+    margin: 130px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.clock{
+    width: 100%;
+    height: 70%;
+    /* background-color: yellow; */
+    position: relative;
+}
+
+.clock::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #D44637;
+    border-radius: 50%;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.secondsHand{
+    height: 140px;
+    width: 3px;
+    background-color: #D44637;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+    translate:   -50% ;
+    transition: .6s;
+    /* animation: secHand infinite 60s linear; */
+    /* display: none; */
+}
+
+.minutesHand{
+    height: 140px;
+    width: 3px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+    translate:   -50%;
+    transition: .6s;
+    /* animation: secHand infinite 60s linear; */
+    /* display: none; */
+}
+.hoursHand{
+    height: 70px;
+    width: 3px;
+    background-color: black;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+    translate: -50% ;
+    transition: .6s;
+    /* animation: secHand infinite 60s linear; */
+    /* display: none; */
+}
+
+.minutesHand.modeOn , .hoursHand.modeOn{
+    background-color: #fff;
+}
+
+
+.digitalClock{
+    width: 100%;
+    height: 30%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* color: #fff; */
+}
+
+.digitalClock.modeOn{
+    color: #fff;
+}
+
+
+.digitalClock p span{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.monthDetails{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #ADABAA;
+    font-size: 17px;
+}
+.date{
+    margin: 0 10px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: black;
+    color: #fff;
+}
+
+.date.modeOn{
+    background-color: #fff;
+    color: black;
+}
+.amOrPm{
+    color: red;
+    margin: 0 15px;
+}
+
+@keyframes secHand{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:500px){
+    .darkModeButton{
+        width: 80px;
+        margin: 30px auto;
+    }
+    .timerContainer{
+        margin: 20px auto;
+        /* height: 500px; */
+    }
+}
