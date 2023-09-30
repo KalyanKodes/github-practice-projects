@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero{
+    margin: 0 30px;
+    width: 600px;
+    height: 450px;
+    /* background-color: yellow; */
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+article p{
+    margin: 10px 0 ;
+    text-align: center;
+}
+
+article :nth-child(1){
+    font-weight: 900;
+}
+
+.code::-webkit-inner-spin-button,
+.code::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
+.code{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    /* caret-color: transparent; */
+    background-color: unset;
+    border-radius: 10px;
+    border: 1px solid rgb(86, 86, 91);
+    margin: 10px;
+    /* outline: 3px solid blue; */
+}
+.vefiryButton{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.about{
+    /* width: 500px; */
+    border-radius: 30px;
+    padding: 30px;
+    background-color: rgba(188, 181, 181, 0.3);
+    text-align: center;
+}
+@media (max-width:600px){
+    article , .about{
+        font-size: 12px;
+    }
+    .code{
+        margin: 0px;
+        width: 40px;
+        height: 40px;
+    }
+}
