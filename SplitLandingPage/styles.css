@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+}
+
+.playStationContainer{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    background: url(./Assests/ps.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: .7s;
+}
+
+/* .playStationContainer img{
+    object-fit: cover;
+    object-position: center;
+}
+*/
+
+.playStationContainer::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 84, 236, 0.7);
+    top: 0;
+    left: 0;
+}
+
+.xBoxContainer{
+    width: 70%;
+    height: 100%;
+    background: url(./Assests/xbox.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: .9s;
+}
+.xBoxContainer::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(42, 41, 42 , .6);
+    top: 0;
+    left: 0;
+}
+
+
+.error{
+    margin: auto;
+    display: none;
+    color: red;
+}
+
+
+.xBoxContainer.show{
+    left: 70%;
+}
+.xBoxContainer.hide{
+    left: 30%;
+}
+
+.sale{
+    height: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    /* transform: translate(-25% , -25%); */
+    color: #fff;
+    z-index: 2;
+    /* background-color: yellow; */
+}
+
+.sale h1{
+    font-size: 40px;
+    /* font-weight: 900; */
+}
+
+.sale button{
+    width: 180px;
+    height: 50px;
+    color: #fff;
+    outline: none;
+    background-color: unset;
+    border: 2px solid #fff;
+    /* font-weight: 900; */
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+.sale button:hover{
+    background-color: rgba(0,0,0,.6);
+}
+@media (max-width:1000px){
+    .hero{
+        display: none;
+    }
+    .error{
+        display: block;
+    }
+}
