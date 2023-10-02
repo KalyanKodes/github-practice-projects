@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    overflow-x: hidden;
+}
+
+.imgContainer{
+    margin: 20px 0 ;
+    width: 960px;
+    height: auto;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image{
+    background-color: blue;
+    object-fit: cover;
+    object-position: center;
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px;
+}
+
+@media (max-width: 970px){
+    .image{
+        width: 250px;
+        height: 250px;
+    }
+    .imgContainer{
+        width: calc(270px * 3);
+    }
+}
+
+@media (max-width: 820px){
+    .image{
+        width: 200px;
+        height: 200px;
+    }
+    .imgContainer{
+        width: calc(220px * 3);
+    }
+}
+
+@media (max-width: 660px){
+    .image{
+        width: 320px;
+        height: 320px;
+    }
+    .imgContainer{
+        width: calc(340px * 1);
+    }
+}
+
+@media (max-width: 350px){
+    .image{
+        width: 300px;
+        height: 300px;
+    }
+    .imgContainer{
+        width: calc(320px * 1);
+    }
+}
+
