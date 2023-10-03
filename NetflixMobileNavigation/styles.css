@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.netflixLogo{
+    margin: 10px;
+    width: 150px;
+}
+
+.fa-bars{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-xmark{
+    position: absolute;
+    right: 70px;
+    top: 60px;
+    font-size: 20px;
+    color: rgba(0, 0, 0 , .5);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.sideBar{
+    width: 450px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: .5s;
+    transform: translate(-450px, 0);
+}
+
+.sideBar.show{
+    transform: translate(0 , 0);
+}
+.colorContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: .5s;
+    transform: translate(-450px, 0);
+}
+
+.colorContainer.show{
+    transform: translate(0, 0);
+
+}
+.blackContainer{
+    width: 100%;
+    background-color: black;
+    /* display: none; */
+}
+
+.redContainer{
+    width: 95%;
+    background-color: #E50914;
+    /* display: none; */
+}
+
+.whiteContainer{
+    width: 90%;
+    background-color: #FFF;
+    /* display: none; */
+    padding: 40px;
+}
+
+ul li{
+    list-style: none;
+    margin: 10px;
+    /* font-size: px; */
+}
+
+.item-4 , .item-5 , .item-6 , .item-7{
+    margin: 10px 10px 10px 40px;
+}
+
+
+
+@media (max-width:600px){
+    .sideBar{
+        width: 320px;
+    }
+    .whiteContainer{
+        padding: 20px;
+    }
+    ul li{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 330px){
+    .sideBar{
+        width: 300px;
+    }
+    .whiteContainer{
+        padding: 10px;
+    }
+    ul li{
+        font-size: 13px;
+    }
+    
+}
