@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  color: #fff;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #3b3b98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 450px;
+  /* height: 450px; */
+  padding: 20px;
+  background-color: #23235b;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.resultContainer {
+  width: 100%;
+  /* width: 100%; */
+  height: 50px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fa-copy {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.conditions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.length {
+  padding: 5px;
+  width: 60px;
+  height: 30px;
+  background-color: unset;
+  color: #ffff;
+  border: 1px solid white;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #3b3b98;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: 350px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    width: 250px;
+  }
+}
