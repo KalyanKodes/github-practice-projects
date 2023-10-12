@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.execption{
+  position: absolute;
+  font-size: 20px;
+  color: red;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  text-align: center;
+}
+.wrapper{
+  width: 100%;
+  max-width: 100%;
+  height: 850px;
+  margin: 0 10px;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  overflow: hidden;
+}
+
+
+.cards{
+  width: 8%;
+  height: 100%;
+  background-color: blue;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 0 0 20px;
+  position: relative;
+  transition: .7s ease-in;
+  cursor: pointer;
+}
+
+.cards p{
+  position: absolute;
+  bottom: 30px;
+  /* display: none; */
+  font-size: 0px;
+  color: #FFF;
+}
+
+.card_1.show{
+  width: 60%;
+}
+.card_1.show p{
+  /* display: block; */
+  font-size: 30px;
+  animation: text 1s 1s 1;
+}
+
+@keyframes text{
+  0%,100%{
+    font-size: 30px;
+  }
+  50%{
+    font-size: 20px;
+  }
+}
+
+.card_2.show{
+  width: 60%;
+}
+.card_2.show p{
+  font-size: 30px;
+  animation: text 1s 1s 1;
+}
+.card_3.show{
+  width: 60%;
+}
+.card_3.show p{
+  font-size: 30px;
+  animation: text 1s 1s 1;
+}
+.card_4.show{
+  width: 60%;
+}
+.card_4.show p{
+  display: block;
+  font-size: 30px;
+  animation: text 1s 1s 1;
+}
+.card_5.show{
+  width: 60%;
+}
+.card_5.show p{
+  font-size: 30px;
+  animation: text 1s 1s 1;
+}
+
+@media (max-width: 1000px){
+  .card_5{
+    display: none;
+  }
+  .execption{
+    display: block;
+  }
+}
+@media (max-width: 800px){
+  .card_4{
+    display: none;
+  }
+}
+
+@media (max-height: 900px){
+  .wrapper{
+    height: 600px;
+  }
+}
+@media (max-height: 600px){
+  .wrapper{
+    height: 450px;
+  }
+}
