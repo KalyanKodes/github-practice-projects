@@ -48,9 +48,9 @@ function renderDigitalTime(minutes , hours , weekDay , month , date){
     let min = minutes<10?`0${minutes}`:minutes;
     let hr = hours<10?`0${hours}`:hours;
     if (hours >= 0 && hours < 12) {
-        document.querySelector('.amOrPm').innerHTML = "PM"
-    } else {
         document.querySelector('.amOrPm').innerHTML = "AM"
+    } else {
+        document.querySelector('.amOrPm').innerHTML = "PM"
     }
     document.querySelector('.hours').innerHTML = hr;
     document.querySelector('.minutes').innerHTML = min;
