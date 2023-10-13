@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: #22254b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 60px 0;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 20px;
+  background-color: #373b69;
+  box-shadow: 0 10px 20px rgba(48, 46, 46, 0.5);
+  z-index: 2;
+}
+
+input[type="search"] {
+  width: 220px;
+  max-width: 220px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 17px;
+  background-color: unset;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #2225;
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 85%;
+  height: auto;
+  margin: 20px;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.movieBox {
+  height: 450px;
+  /* background-color: blue; */
+  width: 300px;
+  max-width: 300px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  /* flex: 1 1 300px; */
+}
+.posterImage {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  /* object-position: center; */
+}
+
+.titleAndRating {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  background-color: #373b69;
+  position: absolute;
+  bottom: 0;
+}
+
+.movieTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+}
+
+.movieRating {
+  /* margin: 0 10px; */
+  padding: 5px;
+  text-align: center;
+  color: #ffa500;
+  background-color: #22254b;
+}
+
+.invalid {
+  text-align: center;
+  position: absolute;
+  display: none;
+}
+
+.invalid.show {
+  display: block;
+}
+
+.overview {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: space-around;
+  gap: 20px;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.movieBox:hover .overview {
+  transform: translateY(0);
+}
+.overview :nth-child(1) {
+  font-weight: 800;
+}
+@media (max-width: 400px) {
+  .movieBox {
+    width: 260px;
+    height: 370px;
+  }
+  .overview :nth-child(2) {
+    font-size: 12px;
+  }
+}
